@@ -1,0 +1,161 @@
+CONSTTK const
+INTTK int
+IDENFR a
+LBRACK [
+INTCON 10
+<umber>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<onstExp>
+RBRACK ]
+ASSIGN =
+LBRACE {
+INTCON 1
+<umber>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<onstExp>
+COMMA ,
+INTCON 2
+<umber>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<onstExp>
+COMMA ,
+INTCON 3
+<umber>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<onstExp>
+COMMA ,
+INTCON 4
+<umber>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<onstExp>
+RBRACE }
+<onstInitVal>
+<onstDef>
+SEMICN ;
+<onstDecl>
+INTTK int
+MAINTK main
+LPARENT (
+RPARENT )
+LBRACE {
+CONSTTK const
+INTTK int
+IDENFR b
+LBRACK [
+INTCON 3
+<umber>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<onstExp>
+RBRACK ]
+ASSIGN =
+LBRACE {
+IDENFR a
+LBRACK [
+INTCON 1
+<umber>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<xp>
+RBRACK ]
+<Val>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<onstExp>
+COMMA ,
+IDENFR a
+LBRACK [
+INTCON 2
+<umber>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<xp>
+RBRACK ]
+<Val>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<onstExp>
+COMMA ,
+IDENFR a
+LBRACK [
+INTCON 3
+<umber>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<xp>
+RBRACK ]
+<Val>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<onstExp>
+RBRACE }
+<onstInitVal>
+<onstDef>
+SEMICN ;
+<onstDecl>
+PRINTFTK printf
+LPARENT (
+STRCON "%d\n"
+COMMA ,
+IDENFR b
+LBRACK [
+INTCON 0
+<umber>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<xp>
+RBRACK ]
+<Val>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<xp>
+RPARENT )
+SEMICN ;
+<tmt>
+RETURNTK return
+INTCON 0
+<umber>
+<rimaryExp>
+<naryExp>
+<ulExp>
+<ddExp>
+<xp>
+SEMICN ;
+<tmt>
+RBRACE }
+<lock>
+<ainFuncDef>
+<ompUnit>

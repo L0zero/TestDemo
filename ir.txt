@@ -1,0 +1,72 @@
+# Global Declarations:
+# ------------------------global------------------------
+$global start
+$begin @global@0
+# --------Global--------
+    be decl  
+$end @global@0
+
+
+# Main Func Declarations:
+# ------------------------entry------------------------
+$func start
+$begin main@2
+$jump_to main@3
+$dom main@2
+# --------New Function main Defined--------
+    def main  
+    be fpara  
+    decl Temp@0 Int 0
+    decl Temp@1 Int 0
+    decl Temp@2 Int 0
+    decl Temp@3 Int 0
+    be decl
+$end main@2
+
+
+$begin main@3
+$jump_from main@2
+$jump_to main@4
+$def Temp@3 Temp@3@7
+$def Temp@2 Temp@2@6
+$def Temp@1 Temp@1@5
+$def Temp@0 Temp@0@4
+$dom main@3
+$dom main@2
+$sDom main@2
+$iDom main@2
+# main func content
+    im 0 Temp@0@4 
+    get Global@b@1 Temp@0@4 Temp@1@5
+    im 2 Temp@2@6 
+    be rpara  
+    rpara Global@String@0@2  
+    rpara Temp@1@5  
+    rpara Temp@2@6  
+    call printf  
+    im 0 Temp@3@7 
+    ret Temp@3@7  
+    ret none  
+$end main@3
+
+
+# ------------------------cpBlocks------------------------
+$begin main@4
+$jump_from main@3
+$def Temp@3 Temp@3@7
+$def Temp@2 Temp@2@6
+$def Temp@1 Temp@1@5
+$def Temp@0 Temp@0@4
+$dom main@4
+$dom main@3
+$dom main@2
+$sDom main@3
+$sDom main@2
+$iDom main@3
+# main func exit
+    label exit@main  
+    exit   
+$end main@4
+
+
+# ------------------------func------------------------

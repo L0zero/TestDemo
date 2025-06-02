@@ -1,0 +1,107 @@
+//testfile1:复杂条件运算与判断，短路求值
+int global = 0;
+int func_cond() {
+    global=global+1;
+    return global;
+}
+
+int func1() {
+    printf("func1!\n");
+    return 1;
+}
+int func2() {
+    printf("func2!\n");
+    return 1;
+}
+int func3() {
+    printf("func3!\n");
+    return 1;
+}
+int func4() {
+    printf("func4!\n");
+    return 1;
+}
+int func5() {
+    printf("func5!\n");
+    return 1;
+}
+int func6() {
+    printf("func6!\n");
+    return 1;
+}
+int func7() {
+    printf("func7!\n");
+    return 1;
+}
+int func8() {
+    printf("func8!\n");
+    return 1;
+}
+int func9() {
+    printf("func9!\n");
+    return 1;
+}
+int func10() {
+    printf("func10!\n");
+    return 1;
+}
+int func11() {
+    printf("func11!\n");
+    return 1;
+}
+int func12() {
+    printf("func12!\n");
+    return 1;
+}
+int func13() {
+    printf("func13!\n");
+    return 1;
+}
+int func14() {
+    printf("func14!\n");
+    return 1;
+}
+int func15() {
+    printf("func15!\n");
+    return 1;
+}
+int func16() {
+    printf("func16!\n");
+    return 1;
+}
+int func17() {
+    printf("func17!\n");
+    return 1;
+}
+int func18() {
+    printf("func18!\n");
+    return 1;
+}
+int func19() {
+    printf("func19!\n");
+    return 1;
+}
+int func20() {
+    printf("func20!\n");
+    return 1;
+}
+void test_if() {
+    if (0 && func1()) { ; }
+    if (1 || func2()) { ; }
+    if (1 && func3() && 0 && func4()) { ; }
+    if (0 || !func5() || 1 || !func6()) { ; }
+    if (0 && func7() || func8() && 1) { ; }
+    if (0 || !func9() && func10() && 1) { ; }
+    if (0 && func11() || func12()) { ; }
+    if (!func13() || 1 && func14()) { ; }
+    if (1 == func15()) { ; }
+    if (1 != func16()) { ; }
+}
+
+int main() {
+    printf("21376218\n");
+    test_if();
+    printf("%d\n", global);
+    printf("Finish test1\n");
+    return 0;
+}

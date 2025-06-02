@@ -1,0 +1,420 @@
+.data
+    __global__0: .asciiz "%d\n"
+    __global__1: .word 1, 2, 3, 4, 0, 0, 0, 0, 0, 0
+    __global__2: .word 2, 3, 4
+    __global__3: .word 0
+    null: .word 0
+.text
+# Global Declarations:
+# ------------------------global------------------------
+# New Block:
+__3:
+# --------Global--------
+#     be decl  
+# after decls
+# AS $sp at 0
+# wrong!!! push ident to $root
+# wrong!!! push ident to $root
+# wrong!!! push ident to $root
+# wrong!!! push ident to $root
+# wrong!!! push ident to $root
+# AS $sp at 0
+ 
+# wrong!!!
+# try to find $t0@func_1
+ 
+# wrong!!!
+# try to find $t1@func_1
+ 
+# wrong!!!
+# try to find $t2@func_1
+ 
+# wrong!!!
+# try to find $t3@func_1
+ 
+# wrong!!!
+# try to find $ra@func_1
+ 
+# End Block:
+# @global@0
+# Main Func Declarations:
+# ------------------------entry------------------------
+# New Block:
+__4:
+# --------New Function main Defined--------
+#     def main  
+# new AS: main
+__5:
+ 
+#     be fpara  
+# after fpara
+# AS $sp at 0
+ 
+#     decl Temp@0 Int 0
+# decl int
+# push int ident: Temp@0 at -4
+ 
+    addiu $sp $sp -4
+ 
+#     decl Temp@1 Int 0
+# decl int
+# push int ident: Temp@1 at -8
+ 
+    addiu $sp $sp -4
+ 
+#     decl Temp@2 Int 0
+# decl int
+# push int ident: Temp@2 at -12
+ 
+    addiu $sp $sp -4
+ 
+#     decl Temp@3 Int 0
+# decl int
+# push int ident: Temp@3 at -16
+ 
+    addiu $sp $sp -4
+ 
+#     be decl
+# after decls
+# AS $sp at -16
+# push int ident: $t0@func_2 at -20
+ 
+    addiu $sp $sp -4
+# push int ident: $t1@func_2 at -24
+ 
+    addiu $sp $sp -4
+# push int ident: $t2@func_2 at -28
+ 
+    addiu $sp $sp -4
+# push int ident: $t3@func_2 at -32
+ 
+    addiu $sp $sp -4
+# push int ident: $ra@func_2 at -36
+ 
+    addiu $sp $sp -4
+# AS $sp at -36
+ 
+# saveReg $t0@func_2 at -20
+    sw $t0 16($sp)
+ 
+# saveReg $t1@func_2 at -24
+    sw $t1 12($sp)
+ 
+# saveReg $t2@func_2 at -28
+    sw $t2 8($sp)
+ 
+# saveReg $t3@func_2 at -32
+    sw $t3 4($sp)
+ 
+# saveReg $ra@func_2 at -36
+    sw $ra 0($sp)
+ 
+# End Block:
+# main@2
+# New Block:
+__6:
+# main func content
+#     im 0 Temp@0@4 
+    li $s0 0
+# saveIdent Temp@0 at -4
+    sw $s0 32($sp)
+ 
+ 
+#     get Global@b@1 Temp@0@4 Temp@1@5
+# getPara Temp@0 at -4
+    lw $s0 32($sp)
+ 
+    sll $s0 $s0 2
+    lw $s0 __global__2($s0)
+# saveIdent Temp@1 at -8
+    sw $s0 28($sp)
+ 
+#     im 2 Temp@2@6 
+    li $s0 2
+# saveIdent Temp@2 at -12
+    sw $s0 24($sp)
+ 
+ 
+#     be rpara  
+# before rpara
+# beforeCall: -36
+# push int ident: $s0@caller_1 at -40
+ 
+    addiu $sp $sp -4
+# push int ident: $s1@caller_1 at -44
+ 
+    addiu $sp $sp -4
+# push int ident: $s2@caller_1 at -48
+ 
+    addiu $sp $sp -4
+# push int ident: $s3@caller_1 at -52
+ 
+    addiu $sp $sp -4
+# push int ident: $s4@caller_1 at -56
+ 
+    addiu $sp $sp -4
+# push int ident: $s5@caller_1 at -60
+ 
+    addiu $sp $sp -4
+# push int ident: $s6@caller_1 at -64
+ 
+    addiu $sp $sp -4
+# push int ident: $s7@caller_1 at -68
+ 
+    addiu $sp $sp -4
+# saveReg $s0@caller_1 at -40
+    sw $s0 28($sp)
+ 
+# saveReg $s1@caller_1 at -44
+    sw $s1 24($sp)
+ 
+# saveReg $s2@caller_1 at -48
+    sw $s2 20($sp)
+ 
+# saveReg $s3@caller_1 at -52
+    sw $s3 16($sp)
+ 
+# saveReg $s4@caller_1 at -56
+    sw $s4 12($sp)
+ 
+# saveReg $s5@caller_1 at -60
+    sw $s5 8($sp)
+ 
+# saveReg $s6@caller_1 at -64
+    sw $s6 4($sp)
+ 
+# saveReg $s7@caller_1 at -68
+    sw $s7 0($sp)
+ 
+#     rpara Global@String@0@2  
+# new rpara rpara@0
+    la $s0 __global__0
+# push int ident: rpara@0 at -72
+ 
+    addiu $sp $sp -4
+# saveIdent rpara@0 at -72
+    sw $s0 0($sp)
+ 
+# AS $sp at -72
+ 
+#     rpara Temp@1@5  
+# new rpara rpara@1
+# getPara Temp@1 at -8
+    lw $s0 64($sp)
+ 
+# push int ident: rpara@1 at -76
+ 
+    addiu $sp $sp -4
+# saveIdent rpara@1 at -76
+    sw $s0 0($sp)
+ 
+# AS $sp at -76
+ 
+#     rpara Temp@2@6  
+# new rpara rpara@2
+# getPara Temp@2 at -12
+    lw $s0 64($sp)
+ 
+# push int ident: rpara@2 at -80
+ 
+    addiu $sp $sp -4
+# saveIdent rpara@2 at -80
+    sw $s0 0($sp)
+ 
+# AS $sp at -80
+ 
+#     call printf  
+    jal __0
+# loadReg $s0@caller_1 at -40
+    lw $s0 40($sp)
+ 
+# loadReg $s1@caller_1 at -44
+    lw $s1 36($sp)
+ 
+# loadReg $s2@caller_1 at -48
+    lw $s2 32($sp)
+ 
+# loadReg $s3@caller_1 at -52
+    lw $s3 28($sp)
+ 
+# loadReg $s4@caller_1 at -56
+    lw $s4 24($sp)
+ 
+# loadReg $s5@caller_1 at -60
+    lw $s5 20($sp)
+ 
+# loadReg $s6@caller_1 at -64
+    lw $s6 16($sp)
+ 
+# loadReg $s7@caller_1 at -68
+    lw $s7 12($sp)
+ 
+    addiu $sp $sp 44
+# pop int rpara@2 at -80
+# pop int rpara@1 at -76
+# pop int rpara@0 at -72
+# pop int $s7@caller_1 at -68
+# pop int $s6@caller_1 at -64
+# pop int $s5@caller_1 at -60
+# pop int $s4@caller_1 at -56
+# pop int $s3@caller_1 at -52
+# pop int $s2@caller_1 at -48
+# pop int $s1@caller_1 at -44
+# pop int $s0@caller_1 at -40
+ 
+# afterCall: -36
+#     im 0 Temp@3@7 
+    li $s0 0
+# saveIdent Temp@3 at -16
+    sw $s0 20($sp)
+ 
+ 
+#     ret Temp@3@7  
+# has return value
+# getPara Temp@3 at -16
+    lw $s0 20($sp)
+ 
+    addiu $v0 $s0 0
+    j __7
+ 
+#     ret none  
+    j __7
+ 
+# End Block:
+# main@3
+# ------------------------cpBlocks------------------------
+# New Block:
+__8:
+# main func exit
+#     label exit@main  
+__7:
+ 
+#     exit   
+# loadReg $t0@func_2 at -20
+    lw $t0 16($sp)
+ 
+# loadReg $t1@func_2 at -24
+    lw $t1 12($sp)
+ 
+# loadReg $t2@func_2 at -28
+    lw $t2 8($sp)
+ 
+# loadReg $t3@func_2 at -32
+    lw $t3 4($sp)
+ 
+# loadReg $ra@func_2 at -36
+    lw $ra 0($sp)
+ 
+# pop int $ra@func_2 at -36
+# pop int $t3@func_2 at -32
+# pop int $t2@func_2 at -28
+# pop int $t1@func_2 at -24
+# pop int $t0@func_2 at -20
+# pop int Temp@3 at -16
+# pop int Temp@2 at -12
+# pop int Temp@1 at -8
+# pop int Temp@0 at -4
+    addiu $sp $sp 36
+# main func exit
+    li $v0 10
+    syscall
+ 
+# End Block:
+# main@4
+# ------------------------func------------------------
+__0:
+addiu $sp $sp -20
+sw $ra 16($sp)
+sw $t0 12($sp)
+sw $t1 8($sp)
+sw $t2 4($sp)
+sw $t3 0($sp)
+
+lw $t0 20($sp) # num
+sll $t0 $t0 2 
+addu $t0 $t0 $sp
+addiu $t0 $t0 20
+lw $s1 0($t0) # char *s
+li $t1 37 # %
+li $t2 99 # c
+li $t3 100 # d
+
+__printf__loop1:
+lbu $a0 0($s1) # *s
+beq $0 $a0 __printf__loop__end # *s == 0 return
+beq $t1 $a0 __printf__per 
+jal __putchar__
+
+__printf__loop2:
+addiu $s1 $s1 1 # s++
+j __printf__loop1
+
+__printf__per: # *s == '%'
+addiu $s1 $s1 1 # s++
+lbu $a0 0($s1) # *s
+beq $0 $a0 __printf__per__end # *s == 0
+beq $t2 $a0 __printf__c # *s == 'c'
+beq $t3 $a0 __printf__d # *s == 'd' 
+
+addu $a1 $a0 $zero
+li $a0 37 
+jal __putchar__ # put %
+
+addu $a0 $a1 $zero
+jal __putchar__ # put *s (not c, d)
+
+j __printf__loop2
+
+__printf__per__end:
+li $a0 37 
+jal __putchar__ # put %
+
+j __printf__loop__end
+
+__printf__c:
+addiu $t0 $t0 -4
+lw $a0 0($t0)
+jal __putchar__ 
+
+j __printf__loop2
+
+__printf__d:
+addiu $t0 $t0 -4
+lw $a0 0($t0)
+jal __putint__ 
+
+j __printf__loop2
+
+__printf__loop__end:
+lw $ra 16($sp)
+lw $t0 12($sp)
+lw $t1 8($sp)
+lw $t2 4($sp)
+lw $t3 0($sp)
+
+addiu $sp $sp 20
+jr $ra
+
+__putchar__:
+li $v0 11
+syscall 
+jr $ra
+
+__putint__:
+li $v0 1
+syscall
+jr $ra
+
+
+__1:
+li $v0 5
+syscall
+jr $ra
+
+
+__2:
+li $v0 12
+syscall
+jr $ra
+
+
